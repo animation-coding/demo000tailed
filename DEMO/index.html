@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!--::::::::::::::::::-Header-:::::::::::::::::-->
+
+    <header class="w-full h-14 fixed top-0 left-0 px-6 bg-[#070d1f] z-[999] flex justify-between items-center md:h-16">
+
+        <a class="text-white block md:hidden" href="#" id="menuOpen">ACoding</a>
+        <!--open button-->
+        <button class="text-white cursor-pointer block md:hidden" id="nav-toggle">@</button>
+
+        <nav class="w-full fixed left-0 md:block top-0 bg-[#070d1f] md:h-auto md:py-0 h-screen py-5 px-0 z-[100]"
+            id="nav-menu">
+            <div
+                class="max-w-5xl md:h-auto md:flex md:flex-wrap md:justify-between md:items-center md:mx-auto mx-6 grid gap-8 h-full">
+                <!--close button-->
+                <button class="text-white text-xl block absolute right-6 p-1 cursor-pointer md:hidden ">*</button>
+
+                <div>
+                    <a href="#" class="flex items-center">
+                        <img src="assets/img/logo.png" class="mr-3 h-6 sm:h-9" alt="logo">
+                    </a>
+                    <p class="text-white text-base font-semibold cursor-pointer md:hidden">Youtuber</p>
+                </div>
+                <div class="flex md:order-2 order-1">
+                    <button type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none font-medium rounded-lg text-sm px-6 py-3 text-center mr-3 md:mr-0 ">
+                        Hire Me</button>
+                </div>
+                <div class=" justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul class="flex flex-col p-4 mt-4 md:flex-row md:mt-0 md:text-base md:font-medium  ">
+                        <li class="my-4 md:my-0">
+                            <a href="#"
+                                class="block md:py-1 md:px-4 text-white md:hover:bg-blue-500 md:hover:text-white hover:text-blue-500 rounded"
+                                aria-current="page">Home</a>
+                        </li>
+                        <li class="my-4 md:my-0">
+                            <a href="#"
+                                class="block md:py-1 md:px-4 text-white md:hover:bg-blue-500 md:hover:text-white hover:text-blue-500 rounded">About</a>
+                        </li>
+                        <li class="my-4 md:my-0">
+                            <a href="#"
+                                class="block md:py-1 md:px-4 text-white md:hover:bg-blue-500 md:hover:text-white hover:text-blue-500 rounded">Services</a>
+                        </li>
+                        <li class="my-4 md:my-0">
+                            <a href="#"
+                                class="block md:py-1 md:px-4 text-white md:hover:bg-blue-500 md:hover:text-white hover:text-blue-500 rounded">Contact</a>
+                        </li>
+                        <li class="my-4 md:my-0">
+                            <a href="#"
+                                class="block md:py-1 md:px-4 text-white md:hover:bg-blue-500 md:hover:text-white hover:text-blue-500 rounded">blog</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+
+
+    <!--::::::::::::::::::-hero section-:::::::::::::::::-->
+    <section class="dark:bg-gray-800 dark:text-gray-100">
+        <div
+            class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                <h1 class="text-5xl font-bold leading-none sm:text-6xl">Ac mattis
+                    <span class="dark:text-violet-400">senectus</span>erat pharetra
+                </h1>
+                <p class="mt-6 mb-8 text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
+                    <br class="hidden md:inline lg:hidden">turpis pulvinar, est scelerisque ligula sem
+                </p>
+                <div
+                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a rel="noopener noreferrer" href="#"
+                        class="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">Suspendisse</a>
+                    <a rel="noopener noreferrer" href="#"
+                        class="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-100">Malesuada</a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+                <img src="assets/svg/Business_SVG.svg" alt=""
+                    class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script>
+        /*===== MENU SHOW Y HIDDEN =====*/
+        const navMenu = document.getElementById('nav-menu'),
+            toggleMenu = document.getElementById('nav-toggle'),
+            closeMenu = document.getElementById('nav-close')
+
+        /*SHOW*/
+        toggleMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('show')
+        })
+
+
+
+        /*===== ACTIVE AND REMOVE MENU =====*/
+        const navLink = document.querySelectorAll('.nav__link');
+
+        function linkAction() {
+            /*Active link*/
+            navLink.forEach(n => n.classList.remove('active'));
+            this.classList.add('active');
+
+            /*Remove menu mobile*/
+            navMenu.classList.remove('show')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction));
+    </script>
+</body>
+
+</html>
